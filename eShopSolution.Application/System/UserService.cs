@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
+using eShopSolution.ViewModels.System.Users;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -33,7 +34,7 @@ namespace eShopSolution.Application.System
             var user = await _userManager.FindByNameAsync(request.UserName);
             if (user == null) return null;
 
-            var result = await _signInManager.PasswordSignInAsync(user, request.Passwrod, request.RememberMe, true);
+            var result = await _signInManager.PasswordSignInAsync(user, request.Password, request.RememberMe, true);
             if (!result.Succeeded)
             {
                 return null;

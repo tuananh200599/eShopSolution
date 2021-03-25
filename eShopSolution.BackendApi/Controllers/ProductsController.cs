@@ -141,7 +141,7 @@ namespace eShopSolution.BackendApi.Controllers
         }
 
         [HttpGet("{productId}/images/{imageId}")]
-        public async Task<IActionResult> GetImageById(int productId, int imageId)
+        public async Task<IActionResult> GetImageById( int imageId)
         {
             var image = await _manageProductService.GetImageById(imageId);
             if (image == null)
