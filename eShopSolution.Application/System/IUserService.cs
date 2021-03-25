@@ -1,4 +1,4 @@
-﻿using eShopSolution.ViewModels.System;
+﻿using eShopSolution.ViewModels.System.Users;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eShopSolution.Application.System
 {
-        public interface IUserService
+    public interface IUserService
         {
             Task<string> Authencate(LoginRequest request);
 
