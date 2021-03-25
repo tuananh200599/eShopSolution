@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using eShopSolution.Application.Catalog.Products;
 using eShopSolution.ViewModels.Catalog.ProductImages;
 using eShopSolution.ViewModels.Catalog.Products;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,6 +14,7 @@ namespace eShopSolution.BackendApi.Controllers
     //api/products
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ProductsController : ControllerBase
     {
         private readonly IPublicProductService _publicProductService;
@@ -27,6 +29,7 @@ namespace eShopSolution.BackendApi.Controllers
 
         //http://localhost:port/products?pageIndex=1&pageSize=10&CategoryId=
         [HttpGet("{languageId}")]
+        
         public async Task<IActionResult> GetAllPaging(string languageId, [FromQuery] GetPublicProductPagingRequest request)
         {
             var products = await _publicProductService.GetAllByCategoryId(languageId, request);
@@ -35,6 +38,7 @@ namespace eShopSolution.BackendApi.Controllers
 
         //http://localhost:port/product/1
         [HttpGet("{productId}/{languageId}")]
+        
         public async Task<IActionResult> GetById(int productId, string languageId)
         {
             var product = await _manageProductService.GetById(productId, languageId);
