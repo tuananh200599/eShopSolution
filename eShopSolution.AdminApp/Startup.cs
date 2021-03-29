@@ -38,7 +38,14 @@ namespace eShopSolution.AdminApp
 
             services.AddControllersWithViews()
                  .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginRequestValidator>());
+
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
+            });
+
             services.AddTransient<IUserApiClient, UserApiClient>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,11 +63,14 @@ namespace eShopSolution.AdminApp
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            
             app.UseAuthentication();
 
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseSession();
+
 
             app.UseEndpoints(endpoints =>
             {

@@ -4,10 +4,8 @@ using System.Text;
 
 namespace eShopSolution.ViewModels.Common
 {
-    public class PagedResult<T>
+    public class RequestBase
     {
-        public List<T> Items { set; get; }
-        public int TotalRecord { set; get; }
-
-}
+        public string BearerToken { get; set; }
+    }
 }
