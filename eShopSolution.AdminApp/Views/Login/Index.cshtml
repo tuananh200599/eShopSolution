@@ -1,8 +1,9 @@
-﻿@using eShopSolution.ViewModels.System.Users;
+﻿@using eShopSolution.ViewModels.System.Users
 @model LoginRequest
 @{
     Layout = null;
 }
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +13,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Đăng nhập hệ thống</title>
-    <link href="~/css/styles.css" rel="stylesheet" />
+    <link href="/css/styles.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
 </head>
 <body class="bg-primary">
@@ -25,10 +26,7 @@
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
                                 <div class="card-header"><h3 class="text-center font-weight-light my-4">Đăng nhập</h3></div>
                                 <div class="card-body">
-                                    <form asp-action="Login" asp-controller="User" method="post">
-
-                                        <div asp-validation-summary="All" class="text-danger"></div>
-
+                                    <form asp-action="Index" asp-controller="Login" method="post">
                                         <div class="form-group">
                                             <label class="small mb-1">Tài khoản</label>
                                             <input class="form-control py-4" asp-for="UserName" type="text" placeholder="Nhập tài khoản" />
@@ -75,6 +73,6 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="~/js/scripts.js"></script>
+    <script src="/js/scripts.js"></script>
 </body>
 </html>
