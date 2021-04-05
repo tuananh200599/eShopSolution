@@ -180,7 +180,7 @@ namespace eShopSolution.Data.Migrations
                         new
                         {
                             Id = new Guid("ca5ab7c5-6a78-4080-866e-bd41f9c07fd1"),
-                            ConcurrencyStamp = "824103b4-ff29-4abc-8410-42430e2cf3a3",
+                            ConcurrencyStamp = "4b7f5b53-c6f1-446a-b611-621fe0fe5a01",
                             Description = "Administrator role",
                             Name = "admin",
                             NormalizedName = "admin"
@@ -257,7 +257,7 @@ namespace eShopSolution.Data.Migrations
                         {
                             Id = new Guid("a6e1e441-93c5-4046-85ff-a3e009f3cf91"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "cfdd0c38-3f57-45a3-9808-4d3196858e73",
+                            ConcurrencyStamp = "6f243d6d-1d46-4d33-b733-56194480cee2",
                             Dob = new DateTime(1999, 5, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "anh453138@gmail.com",
                             EmailConfirmed = true,
@@ -266,7 +266,7 @@ namespace eShopSolution.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "anh453138@gmail.com",
                             NormalizedUserName = "admin",
-                            PasswordHash = "AQAAAAEAACcQAAAAEOiKwWxB1jy5daH22KmBuTwsXlUi1DgWhBGUfL7KksCf8lF8cL0YwnsBZOcnikfo2w==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEGVKq0y/xDWboP/wdAKFuQHrN28cb6ppFzjoWGjMX46wXh1zLmzeJc0ZmplW0WJIAA==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -398,41 +398,41 @@ namespace eShopSolution.Data.Migrations
                         {
                             Id = 1,
                             CategoryId = 1,
-                            LanguageId = "vi-VN",
-                            Name = "Áo nam",
-                            SeoAlias = "ao-nam",
-                            SeoDescription = "Sản phẩm áo thời trang nam",
-                            SeoTitle = "Sản phẩm áo thời trang nam"
+                            LanguageId = "vi",
+                            Name = "Điện thoại Iphone",
+                            SeoAlias = "dien-thoai-Iphone",
+                            SeoDescription = "Sản phẩm điện thoại Iphone",
+                            SeoTitle = "Sản phẩm điện thoại Iphone"
                         },
                         new
                         {
                             Id = 2,
                             CategoryId = 1,
-                            LanguageId = "en-US",
-                            Name = "Men Shirt",
-                            SeoAlias = "men-shirt",
-                            SeoDescription = "The shirt products for men",
-                            SeoTitle = "The shirt products for men"
+                            LanguageId = "en",
+                            Name = "Iphone Phone",
+                            SeoAlias = "iphone-phone",
+                            SeoDescription = "The iphone phone products ",
+                            SeoTitle = "The iphone phone products"
                         },
                         new
                         {
                             Id = 3,
                             CategoryId = 2,
-                            LanguageId = "vi-VN",
-                            Name = "Áo nữ",
-                            SeoAlias = "ao-nu",
-                            SeoDescription = "Sản phẩm áo thời trang nữ",
-                            SeoTitle = "Sản phẩm áo thời trang women"
+                            LanguageId = "vi",
+                            Name = "Điện thoại Samsung",
+                            SeoAlias = "dien-thoai-samsung",
+                            SeoDescription = "Sản phẩm điện thoại Samsung",
+                            SeoTitle = "Sản phẩm điện thoại Samsung"
                         },
                         new
                         {
                             Id = 4,
                             CategoryId = 2,
-                            LanguageId = "en-US",
-                            Name = "Women Shirt",
-                            SeoAlias = "women-shirt",
-                            SeoDescription = "The shirt products for women",
-                            SeoTitle = "The shirt products for women"
+                            LanguageId = "en",
+                            Name = "Samsung Phone",
+                            SeoAlias = "samsung-phone",
+                            SeoDescription = "The samsung phone products",
+                            SeoTitle = "The samsung phone products"
                         });
                 });
 
@@ -494,13 +494,13 @@ namespace eShopSolution.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "vi-VN",
+                            Id = "vi",
                             IsDefault = true,
                             Name = "Tiếng Việt"
                         },
                         new
                         {
-                            Id = "en-US",
+                            Id = "en",
                             IsDefault = false,
                             Name = "English"
                         });
@@ -518,7 +518,7 @@ namespace eShopSolution.Data.Migrations
                     b.Property<DateTime>("OrderDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 3, 18, 9, 39, 36, 674, DateTimeKind.Local).AddTicks(6537));
+                        .HasDefaultValue(new DateTime(2021, 4, 5, 14, 3, 23, 443, DateTimeKind.Local).AddTicks(7779));
 
                     b.Property<string>("ShipAddress")
                         .IsRequired()
@@ -608,7 +608,7 @@ namespace eShopSolution.Data.Migrations
                         new
                         {
                             Id = 1,
-                            DateCreated = new DateTime(2021, 3, 18, 9, 39, 36, 696, DateTimeKind.Local).AddTicks(2496),
+                            DateCreated = new DateTime(2021, 4, 5, 14, 3, 23, 488, DateTimeKind.Local).AddTicks(8138),
                             OriginalPrice = 100000m,
                             Price = 200000m,
                             Stock = 0,
@@ -731,26 +731,26 @@ namespace eShopSolution.Data.Migrations
                         new
                         {
                             Id = 1,
-                            Description = "Áo sơ mi nam trắng Việt Tiến",
-                            Details = "Áo sơ mi nam trắng Việt Tiến",
-                            LanguageId = "vi-VN",
-                            Name = "Áo sơ mi nam trắng Việt Tiến",
+                            Description = "Sản phẩm điện thoại Iphone 12",
+                            Details = "Sản phẩm điện thoại Iphone 12",
+                            LanguageId = "vi",
+                            Name = "Điện thoại Iphone 12",
                             ProductId = 1,
-                            SeoAlias = "ao-so-mi-nam-trang-viet-tien",
-                            SeoDescription = "Áo sơ mi nam trắng Việt Tiến",
-                            SeoTitle = "Áo sơ mi nam trắng Việt Tiến"
+                            SeoAlias = "dien-thoai-Iphone-12",
+                            SeoDescription = "Sản phẩm điện thoại Iphone 12",
+                            SeoTitle = "Sản phẩm điện thoại Iphone 12"
                         },
                         new
                         {
                             Id = 2,
-                            Description = "Viet Tien Men T-Shirt",
-                            Details = "Viet Tien Men T-Shirt",
-                            LanguageId = "en-US",
-                            Name = "Viet Tien Men T-Shirt",
+                            Description = "The iphone 12 phone products",
+                            Details = "The iphone 12 phone products",
+                            LanguageId = "en",
+                            Name = "Iphone 12 Phone",
                             ProductId = 1,
-                            SeoAlias = "viet-tien-men-t-shirt",
-                            SeoDescription = "Viet Tien Men T-Shirt",
-                            SeoTitle = "Viet Tien Men T-Shirt"
+                            SeoAlias = "iphone12-phone",
+                            SeoDescription = "The iphone 12 phone products",
+                            SeoTitle = "The iphone 12 phone products"
                         });
                 });
 
