@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 
 
-namespace eShopSolution.AdminApp.Services
+namespace eShopSolution.ApiIntegration
 {
     public class UserApiClient : IUserApiClient
     {
