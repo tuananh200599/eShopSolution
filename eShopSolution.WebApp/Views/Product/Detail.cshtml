@@ -65,13 +65,13 @@
         <h4>Còn @Model.Product.Stock sản phẩm trong kho</h4>
         <form class="form-horizontal qtyFrm pull-right">
             <div class="control-group">
-                <label class="control-label"><span>Color</span></label>
+                <label class="control-label"><span><localize>Color</localize></span></label>
                 <div class="controls">
                     <select class="span2">
-                        <option>Black</option>
-                        <option>Red</option>
-                        <option>Blue</option>
-                        <option>Brown</option>
+                        <option><localize>Black</localize></option>
+                        <option><localize>Red</localize></option>
+                        <option><localize>Blue</localize></option>
+                        <option><localize>Brown</localize></option>
                     </select>
                 </div>
             </div>
@@ -93,7 +93,7 @@
         </ul>
         <div id="myTabContent" class="tab-content">
             <div class="tab-pane fade active in" id="home">
-                <h4>Product Information</h4>
+                <h4><localize>Product Information</localize></h4>
                 @Html.Raw(Model.Product.Details)
             </div>
             <div class="tab-pane fade" id="profile">
@@ -110,21 +110,20 @@
                                 <img src="themes/images/products/4.jpg" alt="" />
                             </div>
                             <div class="span4">
-                                <h3>New | Available</h3>
+                                <h3><localize>New | Available</localize></h3>
                                 <hr class="soft" />
-                                <h5>Product Name </h5>
-                                <p>
-                                    Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies -
-                                    that is why our goods are so popular..
-                                </p>
-                                <a class="btn btn-small pull-right" href="product_details.html">View Details</a>
+                                <h5>@Model.Product.Name </h5>
+                                
+                                <small>   @Model.Product.Details </small>
+                                
+                                <a class="btn btn-small pull-right" href="product_details.html"><localize>View Details</localize></a>
                                 <br class="clr" />
                             </div>
                             <div class="span3 alignR">
                                 <form class="form-horizontal qtyFrm">
                                     <h3> @Model.Product.Price đ</h3>
                                     <label class="checkbox">
-                                        <input type="checkbox">  Adds product to compair
+                                        <input type="checkbox"> <localize> Adds product to compair</localize>
                                     </label><br />
                                     <div class="btn-group">
                                         <a href="product_details.html" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
