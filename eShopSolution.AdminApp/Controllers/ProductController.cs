@@ -16,7 +16,6 @@ namespace eShopSolution.AdminApp.Controllers
         private readonly IProductApiClient _productApiClient;
         private readonly IConfiguration _configuration;
         private readonly ICategoryApiClient _categoryApiClient;
-        
 
         public ProductController(IProductApiClient productApiClient,
              
@@ -29,8 +28,9 @@ namespace eShopSolution.AdminApp.Controllers
 
         }
 
-        public async Task<IActionResult> Index(string keyword,int? categoryId, int pageIndex = 1, int pageSize = 5)
+        public async Task<IActionResult> Index(string keyword,int? categoryId, int pageIndex = 1, int pageSize = 10)
         {
+
             var languageId =  HttpContext.Session.GetString(SystemConstants.AppSettings.DefaultLanguageId);
 
             var request = new GetManageProductPagingRequest()
@@ -44,12 +44,14 @@ namespace eShopSolution.AdminApp.Controllers
             var data = await _productApiClient.GetPagings(request);
             ViewBag.Keyword = keyword;
 
+            
             var categories = await _categoryApiClient.GetAll(languageId);
             ViewBag.Categories = categories.Select(x => new SelectListItem()
             {
                 Text = x.Name,
                 Value = x.Id.ToString(),
                 Selected = categoryId.HasValue && categoryId.Value == x.Id
+                
                 
             });
             if (TempData["result"] != null)

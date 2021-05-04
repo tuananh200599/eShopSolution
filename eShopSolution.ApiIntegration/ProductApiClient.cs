@@ -22,6 +22,7 @@ namespace eShopSolution.ApiIntegration
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly IConfiguration _configuration;
+
         public ProductApiClient(IHttpClientFactory httpClientFactory,
                    IHttpContextAccessor httpContextAccessor,
                     IConfiguration configuration) : base (httpClientFactory, httpContextAccessor, configuration)
@@ -112,11 +113,11 @@ namespace eShopSolution.ApiIntegration
 
         public async Task<PagedResult<ProductVm>> GetPagings(GetManageProductPagingRequest request)
         {
+
             var data = await GetAsync<PagedResult<ProductVm>>(
                 $"/api/products/paging?pageIndex={request.PageIndex}" +
                 $"&pageSize={request.PageSize}" +
                 $"&keyword={request.Keyword}&languageId={request.LanguageId}&categoryId={request.CategoryId}");
-
 
             return data;
         }

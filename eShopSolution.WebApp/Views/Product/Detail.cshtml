@@ -8,7 +8,7 @@
 @inject LazZiya.ExpressLocalization.ISharedCultureLocalizer _loc;
 
 <ul class="breadcrumb">
-    <li><a href="/"><localize>Home</localize></a> <span class="divider">/</span></li>
+    <li><a asp-action="Index" asp-controller="Home"><localize>Home</localize></a> <span class="divider">/</span></li>
     <li class="active">@Model.Product.Name</li>
 </ul>
 
@@ -116,7 +116,7 @@
                                 
                                 <small>   @Model.Product.Details </small>
                                 
-                                <a class="btn btn-small pull-right" href="product_details.html"><localize>View Details</localize></a>
+                                <a class="btn btn-small pull-right" href="#"><localize>View Details</localize></a>
                                 <br class="clr" />
                             </div>
                             <div class="span3 alignR">
@@ -126,15 +126,15 @@
                                         <input type="checkbox"> <localize> Adds product to compair</localize>
                                     </label><br />
                                     <div class="btn-group">
-                                        <a href="#" class="btn btn-large btn-primary btn-add-cart" data-id="@Model.Product.Id"> Add to <i class=" icon-shopping-cart"></i></a>
-                                        <a href="product_details.html" class="btn btn-large"><i class="icon-zoom-in"></i></a>
+                                        <a href="/@culture.Name/@_loc["products"]/@Model.Product.Id" class="btn btn-large btn-primary btn-add-cart" data-id="@Model.Product.Id"> Add to <i class=" icon-shopping-cart"></i></a>
+                                        <a href="/@culture.Name/@_loc["products"]/@Model.Product.Id" class="btn btn-large"><i class="icon-zoom-in"></i></a>
                                     </div>
                                 </form>
                             </div>
                         </div>
                         <hr class="soft" />
                     </div>
-                    <div class="tab-pane active" id="blockView">
+                    @*<div class="tab-pane active" id="blockView">
                         <ul class="thumbnails">
                             <li class="span3">
                                 <div class="thumbnail">
@@ -150,7 +150,7 @@
                             </li>
                         </ul>
                         <hr class="soft" />
-                    </div>
+                    </div>*@
                 </div>
                 <br class="clr">
             </div>
